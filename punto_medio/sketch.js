@@ -9,24 +9,19 @@ function draw() {
 	//circulo(30,30,10)
 }
 function circulo(px,py,rad){
-	var p =(5/4)-rad
-	if (p<0) {
-			point(px,py)
-			p=p+(2*px)+1
-		}else {
-			px+=1
-			py-=1
-			p=p+(2*px)+1-(2*py)
+	var x,y,d
+	x=0
+	y=rad
+	d=(5/4)-rad
+	while (y>x) {
+		if (d<0) {
+			d+=2*x+5
+			x++
+		}else{
+			d+=2*(x-y)+5
+			x++
+			y--
 		}
-	// for (var k = 0; px >= py; k++) {
-	// 	if (p<0) {
-	// 		point(px,py)
-	// 		p=p+(2*px)+1
-	// 	}else {
-	// 		px+=1
-	// 		py-=1
-	// 		p=p+(2*px)+1-(2*py)
-	// 	}
-	// }
-
+		point(x,y)
+	}
 }

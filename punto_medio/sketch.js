@@ -1,27 +1,45 @@
+var x,y,d
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	circulo(30,30,10)
+
 }
 //examen
 //dda, bresenham, puntomedio
 
 function draw() {
-	//circulo(30,30,10)
+	//circulo(50,30,100)
+
+	background('#ffffff')
+	circulo(mouseX,mouseY,100)
 }
-function circulo(px,py,rad){
-	var x,y,d
-	x=0
-	y=rad
-	d=(5/4)-rad
-	while (y>x) {
-		if (d<0) {
-			d+=2*x+5
-			x++
-		}else{
-			d+=2*(x-y)+5
-			x++
-			y--
-		}
-		point(x,y)
-	}
+function circulo(px,py,r){
+	point(px,py)
+	 let x1=0
+	 let y1=r
+	 let p=(5/4)-r
+	 while(x1<=y1){
+		 	if(p<0){
+				x1++
+				p=p+(2*x1)+1
+			}else {
+				x1++
+				y1--
+				p=p+(2*x1)+1-(2*y1)
+			}
+			point(px+x1,py+y1)
+			point(px+y1,py+x1)
+
+			point(px+x1,py-y1)
+			point(px+y1,py-x1)
+
+			point(px-x1,py-y1)
+			point(px-y1,py-x1)
+
+			point(px-x1,py+y1)
+			point(px-y1,py+x1)
+
+
+
+	 }
+
 }

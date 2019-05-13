@@ -1,9 +1,10 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 
-	linea(10,30,600,30)
+	//linea(10,30,600,30)
 	//linea(30,60,30,0)
 	//linea(1,1,500,500)
+	//linea(100,100,500,500)
 }
 
 function draw() {
@@ -11,6 +12,7 @@ function draw() {
 //linea(0,0,width,height)
 //linea(10,10,500,500)
 }
+
 function linea(x1,y1,x2,y2){
 
 	var ax,ay,x,y,res,idea,i

@@ -1,7 +1,8 @@
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 
-	linea(30,30,0,0)
+	linea(10,30,600,30)
+	//linea(30,60,30,0)
 	//linea(1,1,500,500)
 }
 
@@ -11,7 +12,7 @@ function draw() {
 //linea(10,10,500,500)
 }
 function linea(x1,y1,x2,y2){
-	
+
 	var ax,ay,x,y,res,idea,i
 	if( (x2-x1) >= (y2-y1)){
 			res=x2-x1
